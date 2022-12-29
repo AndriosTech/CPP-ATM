@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include <string.h>
 using namespace std;
+
+// First we will create a class Bank
 class Bank {
 
 	
@@ -74,7 +76,7 @@ int main()
 	int choice;
 
 	// Infinite while loop to choose
-	// options everytime
+	// 1 = true
 	while (1) {
 		cout << "\n~~~~~~~~~~~~~~~~~~~~~~~~~~"
 			<< "~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
@@ -109,10 +111,11 @@ int main()
 			b.withdrawl();
 			break;
 		case 6:
-			exit(1);
+			exit(1); // exit(true) as 1 = true
 			break;
 		default:
 			cout << "\nInvalid choice\n";
+				exite(1);
 		}
 	}
 }
