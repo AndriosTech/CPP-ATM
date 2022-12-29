@@ -6,13 +6,13 @@
 using namespace std;
 class Bank {
 
-	// Private variables used inside class
+	
 private:
 	string name;
 	long long accnumber;
 	char type[10];
 	long long amount = 0;
-	long long tot = 0;
+	long long total = 0;
 
 	// Public variables
 public:
@@ -20,9 +20,7 @@ public:
 	void setvalue()
 	{
 		cout << "Enter name\n";
-		cin.ignore();
-
-		// To use space in string
+	
 		getline(cin, name);
 
 		cout << "Enter Account number\n";
@@ -30,7 +28,7 @@ public:
 		cout << "Enter Account type\n";
 		cin >> type;
 		cout << "Enter Balance\n";
-		cin >> tot;
+		cin >> total;
 	}
 
 	// Function to display the required data
@@ -39,7 +37,7 @@ public:
 		cout << "Name:" << name << endl;
 		cout << "Account No:" << accnumber << endl;
 		cout << "Account type:" << type << endl;
-		cout << "Balance:" << tot << endl;
+		cout << "Balance:" << total << endl;
 	}
 
 	// Function to deposit the amount in ATM
@@ -52,8 +50,8 @@ public:
 	// Function to show the balance amount
 	void showbal()
 	{
-		tot = tot + amount;
-		cout << "\nTotal balance is: " << tot;
+		total = total + amount;
+		cout << "\nTotal balance is: " << total;
 	}
 
 	// Function to withdraw the amount in ATM
@@ -62,7 +60,7 @@ public:
 		int a, avai_balance;
 		cout << "Enter amount to withdraw\n";
 		cin >> a;
-		avai_balance = tot - a;
+		avai_balance = total - a;
 		cout << "Available Balance is" << avai_balance;
 	}
 };
